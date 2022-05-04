@@ -14,5 +14,7 @@ public class TestandoListas {
 		aulas.add(aula3);
 		
 		System.out.println(aulas);
+		
+		aulas.remove(0);
 	}
 }
