@@ -18,6 +18,10 @@ public class TestaAlunos {
 		alunos.add("Mauricio Aniche");
 		alunos.add("Alberto Souza");
 		
+		
+		boolean pauloEstaMatriculado = alunos.contains("Paulo Silveira");
+		System.out.println(pauloEstaMatriculado);
+		
 		System.out.println(alunos.size());
 		
 		alunos.forEach(aluno -> {System.out.println(aluno);});
