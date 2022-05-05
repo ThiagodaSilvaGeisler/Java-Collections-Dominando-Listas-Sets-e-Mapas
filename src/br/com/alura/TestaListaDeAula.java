@@ -25,6 +25,8 @@ public class TestaListaDeAula {
 		
 		Collections.sort(aulas, Comparator.comparing(Aula::getTempo));
 		
-		System.out.println();
+		System.out.println(aulas);
+		
+		aulas.sort(Comparator.comparing(Aula::getTempo));
 	}
 }
