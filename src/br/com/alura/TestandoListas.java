@@ -13,7 +13,7 @@ public class TestandoListas {
 		aulas.add(aula2);
 		aulas.add(aula3);
 
-		System.out.println(aulas);
+		//System.out.println(aulas);
 
 		aulas.remove(0);
 
@@ -21,11 +21,22 @@ public class TestandoListas {
 			System.out.println("Aula: " + aula);
 		}
 		
+		System.out.println("-----------------");
+		
 		String primeiraAula = aulas.get(0);
 		System.out.println("A primeira aula é " + primeiraAula);
 		
-		for(int i =0; i< aulas.size(); i++) {
+		System.out.println("-----------------");
+		
+		for(int i =0; i < aulas.size(); i++) {
 			System.out.println("aula: " + aulas.get(i));
+		
+		System.out.println("-----------------");
+			
+		aulas.forEach(aula -> {
+			System.out.println("percorrendo :");
+			System.out.println("Aula " + aula);
+			});
 		}
 	}
 }
