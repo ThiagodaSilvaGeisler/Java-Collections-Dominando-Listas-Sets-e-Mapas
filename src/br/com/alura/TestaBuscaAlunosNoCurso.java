@@ -18,8 +18,8 @@ public class TestaBuscaAlunosNoCurso {
 		javaColecoes.matricula(a2);
 		javaColecoes.matricula(a3);
 		
-		System.out.println("Quem é o aluno com matricula 5617?");
-		Aluno aluno = javaColecoes.buscaMatriculado(5617);
+		System.out.println("Quem é o aluno com matricula 5618?");
+		Aluno aluno = javaColecoes.buscaMatriculado(5618);
 		System.out.println("aluno : " + aluno);
 
 	}
