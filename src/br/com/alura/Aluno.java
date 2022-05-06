@@ -30,6 +30,12 @@ public class Aluno {
 	}
 	
 	@Override
+	public int hashCode() {
+		return this.nome.charAt(0);
+	}
+	
+	
+	@Override
 	public String toString() {
 		return "[Aluno: " + this.nome + ", matricula: " + this.numeroMatricula + "]";
 	}
