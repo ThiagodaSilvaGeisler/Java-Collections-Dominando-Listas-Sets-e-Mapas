@@ -48,4 +48,8 @@ public class Curso {
 	public void matricula(Aluno aluno) {
 		this.alunos.add(aluno);
 	}
+	
+	public Set<Aluno> getAlunos() {
+		return Collections.unmodifiableSet(alunos);
+	}
 }
