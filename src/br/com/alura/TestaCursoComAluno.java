@@ -1,7 +1,6 @@
 package br.com.alura;
 
-import java.util.Iterator;
-import java.util.Set;
+import java.util.Vector;
 
 public class TestaCursoComAluno {
 
@@ -32,15 +31,10 @@ public class TestaCursoComAluno {
 		
 		System.out.println("-------------------------------------------------------");
 		
-		//E antes do java 5, como se fazia, já que o método acima não existia?
-		// Usava-se o iterator. 
-		Set<Aluno> alunos = javaColecoes.getAlunos();
-		Iterator<Aluno> iterador = alunos.iterator(); // Toda coleção de tem iterator
-		while(iterador.hasNext()) {
-			Aluno proximo = iterador.next();
-			System.out.println(proximo);
-		}
-		//Para percorrer a lista novamente, deve-se pedir solicitar novo iterador por meio de alunos.iterator()
+		//Vector: seguro para ser usada por várias Threads simultaneamente
+		Vector<Aluno> vetor = new Vector<>();
+		
+		
 		
 		System.out.println("-------------------------------------------------------");
 		
