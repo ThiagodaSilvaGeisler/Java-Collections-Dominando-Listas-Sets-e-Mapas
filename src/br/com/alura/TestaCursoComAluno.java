@@ -1,5 +1,8 @@
 package br.com.alura;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
 
 	public static void main(String[] args) {
@@ -20,10 +23,27 @@ public class TestaCursoComAluno {
 		javaColecoes.matricula(a3);
 
 		System.out.println("Todos os alunos matriculados: ");
-		javaColecoes.getAlunos().forEach(a -> {
+		
+		//Se a Set não tem método get, como se percoria lista, antes do java8?
+		for(Aluno a : javaColecoes.getAlunos()) {
 			System.out.println(a);
-		});
-
+		}
+		
+		
+		System.out.println("-------------------------------------------------------");
+		
+		//E antes do java 5, como se fazia, já que o método acima não existia?
+		// Usava-se o iterator. 
+		Set<Aluno> alunos = javaColecoes.getAlunos();
+		Iterator<Aluno> iterador = alunos.iterator(); // Toda coleção de tem iterator
+		while(iterador.hasNext()) {
+			Aluno proximo = iterador.next();
+			System.out.println(proximo);
+		}
+		//Para percorrer a lista novamente, deve-se pedir solicitar novo iterador por meio de alunos.iterator()
+		
+		System.out.println("-------------------------------------------------------");
+		
 		Aluno turini = new Aluno("Rodrigo Turini", 34672);
 		System.out.println("E esse Turini, está matriculado?");
 		System.out.println(javaColecoes.estaMatriculado(turini));
